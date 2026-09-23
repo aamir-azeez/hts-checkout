@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+coverage/
+artifacts/
+cache/
+typechain-types/
+*.tsbuildinfo
+.env
+.env.*
+*.pem
+*.key
+*.dpapi
+.DS_Store
+npm-debug.log*

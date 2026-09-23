@@ -1,0 +1,17 @@
+{
+  "name": "hts-checkout",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": ["packages/*"],
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "dev": "npm run dev --workspace @hts-checkout/web",
+    "build": "npm run compile --workspace @hts-checkout/contracts && npm run build --workspace @hts-checkout/web",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "chain": "npm run chain --workspace @hts-checkout/contracts",
+    "deploy": "npm run deploy --workspace @hts-checkout/contracts",
+    "testnet:probe": "npm run probe --workspace @hts-checkout/contracts"
+  }
+}
