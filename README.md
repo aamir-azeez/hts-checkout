@@ -138,7 +138,7 @@ A signed testnet deployment and one-SAUCE payment between distinct merchant and 
 
 ## External Scaffold-HBAR template
 
-The external installation target is `aamir-azeez/hts-checkout`. It requires a public repository; the command below remains a verification target until archive-based scaffolding has been checked:
+The public external template is `aamir-azeez/hts-checkout`. Fresh unauthenticated GitHub archive scaffolding, clean installation, lint, all 38 tests, production build and HTTP startup were verified on September 24, 2026 for [source commit `738af7d`](https://github.com/aamir-azeez/hts-checkout/commit/738af7def023a433aec781c7300b3fb8f7852fa9). Install with:
 
 ```sh
 npx --yes npm@11.20.0 create scaffold-hbar@0.4.0 --yes -- checkout-app --template aamir-azeez/hts-checkout --frontend nextjs-app --solidity-framework hardhat --package-manager="npm" --network testnet --yes --skip-install --skip-hedera-skills
