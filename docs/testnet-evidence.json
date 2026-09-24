@@ -1,0 +1,90 @@
+{
+  "kind": "hts-checkout-public-testnet-settlement-evidence-v1",
+  "verificationScript": "packages/hardhat/scripts/live-e2e.cjs",
+  "observedAt": "2026-09-24T00:30:09.239Z",
+  "chainId": 296,
+  "participantMode": "distinct merchant and buyer signers",
+  "checkout": "0x9B180de74a3a0F81a3D6C8316447C6EF04474092",
+  "router": "0x0000000000000000000000000000000000159398",
+  "tokenId": "0.0.1183558",
+  "merchant": "0x9bF0FC4c7D117939c1d1276cA09c9266c8331235",
+  "buyer": "0x9CE0F78335CAB965Ad0EE9d386f28Ce5253d6a2c",
+  "invoiceId": "0xa5c5add27960fe2e329be5d22e8e832680a3440807b4dd60973663defc8a7472",
+  "amountOutSauceBaseUnits": "1000000",
+  "merchantNetTokenDelta": "1000000",
+  "quotedInputTinybar": "2155446",
+  "maxInputTinybar": "2177001",
+  "transactionValueWeibar": "21770010000000000",
+  "spentTinybar": "2155446",
+  "spentHbar": "0.02155446",
+  "refundPrincipalTinybar": "21555",
+  "routerSurplusTinybar": "0",
+  "deferredRefundCreditTinybar": "0",
+  "invoiceMarkedPaid": true,
+  "exactMerchantSettlementVerified": true,
+  "duplicatePaymentRejectedByReadOnlySimulation": true,
+  "association": {
+    "hash": "0x70ac1b4ad9d995abef899f4e5475d1b6832765dcb31b15cf71a6ec07a1dd1eda",
+    "explorer": "https://hashscan.io/testnet/transaction/0x70ac1b4ad9d995abef899f4e5475d1b6832765dcb31b15cf71a6ec07a1dd1eda",
+    "blockNumber": 40903327,
+    "gasUsed": "726488",
+    "gasPriceWeibar": "1090000000000",
+    "gasFeeWeibar": "791871920000000000"
+  },
+  "invoiceCreation": {
+    "hash": "0xce9d9d67c9c77e71124f3ef8470d2d0345bc14c5a5491bf0537d0ac41af6ed65",
+    "explorer": "https://hashscan.io/testnet/transaction/0xce9d9d67c9c77e71124f3ef8470d2d0345bc14c5a5491bf0537d0ac41af6ed65",
+    "blockNumber": 40903330,
+    "gasUsed": "120028",
+    "gasPriceWeibar": "1090000000000",
+    "gasFeeWeibar": "130830520000000000"
+  },
+  "payment": {
+    "hash": "0xc660ca77f60a8d9e464f9b3a11d0b270b2dcd2db4dc0cd4dc2dc1e3843acb4a0",
+    "explorer": "https://hashscan.io/testnet/transaction/0xc660ca77f60a8d9e464f9b3a11d0b270b2dcd2db4dc0cd4dc2dc1e3843acb4a0",
+    "blockNumber": 40903333,
+    "gasUsed": "257548",
+    "gasPriceWeibar": "1090000000000",
+    "gasFeeWeibar": "280727320000000000"
+  },
+  "deployment": {
+    "checkout": "0x9B180de74a3a0F81a3D6C8316447C6EF04474092",
+    "hash": "0xf15e3dc22672fc893be4c6184dd595b3b081cad989aafb45cd4eacf71afeb1a1",
+    "explorer": "https://hashscan.io/testnet/transaction/0xf15e3dc22672fc893be4c6184dd595b3b081cad989aafb45cd4eacf71afeb1a1",
+    "token": "0x0000000000000000000000000000000000120f46",
+    "whbar": "0x0000000000000000000000000000000000003aD2",
+    "poolFee": 3000
+  },
+  "gasAndRefundReconciliation": {
+    "residualWeibar": "0",
+    "matches": true
+  },
+  "publicSources": {
+    "mirrorTransactions": "https://testnet.mirrornode.hedera.com/api/v1/transactions/0.0.7314364-1790209801-032432221",
+    "mirrorContractActions": "https://testnet.mirrornode.hedera.com/api/v1/contracts/results/0xc660ca77f60a8d9e464f9b3a11d0b270b2dcd2db4dc0cd4dc2dc1e3843acb4a0/actions?limit=100"
+  },
+  "scope": [
+    "Hedera testnet, one SAUCE invoice, one live SaucerSwap V2 pool",
+    "Different merchant and buyer testnet accounts signed their roles; both were operated for this verification",
+    "Signed script-based settlement; browser-wallet signing is not established by this run",
+    "Duplicate payment was rejected by read-only simulation; no second signed payment was submitted",
+    "Immediate refund path exercised; deferred credit withdrawal remains covered by local contract tests"
+  ],
+  "previousSameAccountRun": {
+    "observedAt": "2026-09-24T00:16:56.267Z",
+    "participantMode": "same operator acts as merchant and buyer",
+    "invoiceId": "0xaba92f72cf7a9009dbc24389f6d5aaca8b85411c38908c73031cc5e25e7848db",
+    "payment": {
+      "hash": "0x81943bf372e66f04cac771b17b59b5ed5da9475ffd4073baf6c7f35cf3d11877",
+      "explorer": "https://hashscan.io/testnet/transaction/0x81943bf372e66f04cac771b17b59b5ed5da9475ffd4073baf6c7f35cf3d11877",
+      "blockNumber": 40902942,
+      "gasUsed": "257548",
+      "gasPriceWeibar": "1090000000000",
+      "gasFeeWeibar": "280727320000000000"
+    },
+    "amountOutSauceBaseUnits": "1000000",
+    "merchantNetTokenDelta": "1000000",
+    "spentTinybar": "2155441",
+    "refundPrincipalTinybar": "21555"
+  }
+}

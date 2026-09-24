@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
-  "workspaces": ["packages/*"],
-  "engines": { "node": ">=22.13.0" },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.13.0",
+    "npm": ">=11.18.0"
+  },
   "scripts": {
     "dev": "npm run dev --workspace @hts-checkout/web",
     "build": "npm run compile --workspace @hts-checkout/contracts && npm run build --workspace @hts-checkout/web",
@@ -12,6 +17,24 @@
     "test": "npm run test --workspaces --if-present",
     "chain": "npm run chain --workspace @hts-checkout/contracts",
     "deploy": "npm run deploy --workspace @hts-checkout/contracts",
-    "testnet:probe": "npm run probe --workspace @hts-checkout/contracts"
+    "testnet:probe": "npm run probe --workspace @hts-checkout/contracts",
+    "validate:template": "node scripts/validate-template.cjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "overrides": {
+    "hardhat": {
+      "undici": "6.28.1",
+      "adm-zip": "0.6.1",
+      "uuid": "11.1.1",
+      "cookie": "0.7.2"
+    },
+    "tmp": "0.2.7",
+    "serialize-javascript": "7.1.2",
+    "diff": "8.0.3"
+  },
+  "packageManager": "npm@11.20.0",
+  "devDependencies": {
+    "prettier": "3.9.9"
   }
 }
