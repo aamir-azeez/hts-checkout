@@ -1,0 +1,66 @@
+{
+  "name": "hts-checkout",
+  "description": "Exact-output SAUCE invoices paid in test HBAR through SaucerSwap V2 on Hedera testnet.",
+  "version": "0.1.0",
+  "create-scaffold-hbar": {
+    "requirements": {
+      "node": ">=22.13.0",
+      "npm": ">=11.18.0"
+    },
+    "capabilities": {
+      "frontend": ["nextjs-app"],
+      "solidityFramework": ["hardhat"],
+      "packageManager": ["npm"]
+    },
+    "defaults": {
+      "frontend": "nextjs-app",
+      "solidityFramework": "hardhat",
+      "packageManager": "npm"
+    },
+    "outro": {
+      "sections": [
+        {
+          "title": "Validate the scaffold",
+          "steps": [
+            {
+              "command": "{run:format}"
+            },
+            {
+              "command": "{run:validate:template} -- --scaffolded"
+            },
+            {
+              "command": "{run:lint}"
+            },
+            {
+              "command": "{run:test}"
+            },
+            {
+              "command": "{run:build}"
+            }
+          ]
+        },
+        {
+          "title": "Configure Hedera testnet",
+          "steps": [
+            {
+              "text": "Follow README.md and docs/architecture.md to configure a funded testnet deployer and recipient token association."
+            },
+            {
+              "command": "{run:testnet:probe}"
+            },
+            {
+              "command": "{run:deploy}"
+            },
+            {
+              "text": "Set NEXT_PUBLIC_CHECKOUT_ADDRESS in packages/nextjs/.env.local to the deployed contract, then start the frontend."
+            },
+            {
+              "command": "{run:dev}"
+            }
+          ]
+        }
+      ],
+      "installCommand": "npx --yes npm@11.20.0 ci --ignore-scripts"
+    }
+  }
+}
