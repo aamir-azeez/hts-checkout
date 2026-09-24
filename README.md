@@ -2,6 +2,8 @@
 
 ![HTS Checkout local mock invoice interface](docs/assets/checkout.jpg)
 
+[Watch the 1 min 50 sec demo](https://aamir-azeez.github.io/hts-checkout/demo.html) · [Testnet transaction evidence](docs/testnet-evidence.md)
+
 Create an invoice for an exact token amount. Your customer pays in HBAR, and SaucerSwap only converts what the payment requires. The merchant gets the requested SAUCE amount, and the remaining HBAR goes back to the customer or remains as a withdrawal credit if the refund cannot be issued.
 
 The template integrates invoice generation, spending limits, swap execution, refunds, and receipts into a single reusable workflow. An invoice may be paid only once. If the invoice is expired or the payment amount is over the customer's limit, it will fail without resolving the invoice.
